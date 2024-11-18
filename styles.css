@@ -1,0 +1,10 @@
+*{
+    margin: 0; /* * is the universal selector - will apply changes to all elements */
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    height: 100vh;
+    background-color: #9DF9EF;
+}
