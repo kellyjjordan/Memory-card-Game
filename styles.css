@@ -5,9 +5,30 @@
 
 }
 body {
-    height: 100vh;
+    height: 200vh;
     background-color: #9DF9EF;
 }
 img {
     width: 100px;
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    padding: 4px;
+    
+}
+
+.Memory-game {
+    --gap:10px;
+    --num-cols: 3;
+    --row-height:200px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols),1fr);
+    grid-auto-rows: var(--row-height);
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
