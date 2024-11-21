@@ -17,6 +17,23 @@ if(!hasFlippedCard){
 
     console.log(firstCard.dataset.framework);
     console.log(secondCard.dataset.framework);
+
+    //do cards match?
+    if (firstCard.dataset.framework === secondCard.dataset.framework){
+        //it matches
+        firstCard.removeEventListener('click', flipCard);
+        secondCard.removeEventListener('click',flipCard);
+        }
+        else { //not a match
+            //setTimeout to allow time to see the 2nd card flip
+            setTimeout(()=>{
+                firstCard.classList.remove("flip");
+                secondCard.classList.remove("flip");
+
+            }, 1500);
+            
+        }
+        console.log("function done")
     }
 
 
