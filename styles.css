@@ -60,6 +60,6 @@ body {
     background: blue;
     backface-visibility: hidden;
 }
-.back {
+.front {
     transform: rotateY(180deg);
 }
