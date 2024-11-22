@@ -1,8 +1,10 @@
 const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
+let lockBoard = false;
 let firstCard, secondCard; //declaring the card variables
 //function
 function flipCard(){
+    if (lockBoard) return;
     this.classList.toggle('flip');
 //checking if its the first or second card the user picks
 if(!hasFlippedCard){
@@ -36,9 +38,12 @@ function disableCards(){
 }
 function unflipCards(){
     //not a match, so it unflips itself
+    lockBoard=true;
     setTimeout(() =>{
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
+        
+        lockBoard=false;
     }, 1500);
 }
 //attach an event listening (click) that will excetute a function when clicked
