@@ -14,10 +14,11 @@ if(!hasFlippedCard){
     //2nd click
     hasFlippedCard = false;
     secondCard=this;
+    checkForMatch();
+    }
+}
 
-    console.log(firstCard.dataset.framework);
-    console.log(secondCard.dataset.framework);
-
+function checkForMatch(){
     //do cards match?
     if (firstCard.dataset.framework === secondCard.dataset.framework){
         //it matches
@@ -35,9 +36,6 @@ if(!hasFlippedCard){
         }
         console.log("function done")
     }
-
-
-}
 
 //attach an event listening (click) that will excetute a function when clicked
 cards.forEach(card => card.addEventListener('click', flipCard));
