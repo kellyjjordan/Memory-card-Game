@@ -12,7 +12,6 @@ body {
 
 .Memory-game {
     --gap:10px;
-    --num-cols: 3;
     --row-height:200px;
 
     width: 600px;
