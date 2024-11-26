@@ -73,11 +73,11 @@ function checkForWin(){
 
 }
 //function where each card is assigned an number 
-// (function shuffle (){
-//     cards.forEach(cards => {
-//         let randomPos = Math.floor(Math.random() * 12) 
-//         cards.style.order = randomPos;
-//     });
-// })(); //wrap to immediatly invoke it 
+    (function shuffle (){
+     cards.forEach(cards => {
+        let randomPos = Math.floor(Math.random() * 12) 
+        cards.style.order = randomPos;
+     });
+ })(); //wrap to immediatly invoke it 
 //attach an event listening (click) that will excetute a function when clicked
 cards.forEach(card => card.addEventListener('click', flipCard));
