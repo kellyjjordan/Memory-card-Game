@@ -3,9 +3,14 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard; //declaring the card variables
-//function
+//functions
 let matchedCards = 0;
 let totalCards = cards.length
+
+
+
+//to start game
+
 function flipCard(){
     if (lockBoard) return; //if true, the function is exited immediatly -> preventing further flipping
     if (this === firstCard) return;
